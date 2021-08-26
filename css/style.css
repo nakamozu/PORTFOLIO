@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+html {
+    /* 1remが10px */
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Noto Sans JP';
+    font-size: 1.2rem;
+    line-height: 1;
+    color: #9BC6BD;
+    background-color: #fff;
+}
+
+a {
+    color: #9BC6BD;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+li {
+    list-style: none;
+}
+
+.box {
+    width: 100%;
+    height: 100vh;
+}
+
+.sns-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* ----------------------------------------
+sticky
+---------------------------------------- */
+#header {
+    height: 100vh;
+    padding: 40px 50px;
+    position: sticky;
+    top: 0px;
+}
+
+#header .sticky {
+    height: 100%;
+    position: relative;
+}
+
+#header .sticky .site-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2.5rem;
+}
+
+#sticky .site-title {
+
+}
+
+#header .sticky .aroow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.HomeNavDots-list-item {
+    width: 26px;
+    height: 26px;
+}
+
+.read-btn {
+    width: 150px;
+    height: 50px;
+
+}
+
+.readmore {
+    text-align: center;
+}
+
+/*========= ページネーションCSS ===============*/
+.pagination {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* list-style: none; */
+}
+/* 
+.pagination li {
+    width: 30px;
+    height: 30px;
+} */
+
+.pagination-list {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.pagination-item {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bcbcbc;
+}
+
+.pagination-item .active {
+    background-color: #ff0000;
+}
+
+/* ----------------------------------------
+home
+---------------------------------------- */
+#home {
+}
+
+#home .title {
+    font-size: 10rem;
+    font-weight: 100;
+    /* text-align: center; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+}
+
+/* ----------------------------------------
+about
+---------------------------------------- */
+#about {
+    width: 100%;
+    display: flex;
+}
+
+#about .left {
+    width: 50%;
+}
+
+#about .right {
+    width: 50%;
+}
+
+
+
+/* ----------------------------------------
+footer
+---------------------------------------- */
+#footer {
+    padding: 40px 50px;
+    position: sticky;
+    bottom: 0;
+}
