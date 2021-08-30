@@ -10,7 +10,9 @@ body {
     font-size: 1.2rem;
     line-height: 1;
     color: #9BC6BD;
-    background-color: #fff;
+    background-color: #becdd6;
+    position: relative;
+    z-index: -10;
 }
 
 a {
@@ -37,43 +39,6 @@ li {
     height: 30px;
 }
 
-/* ----------------------------------------
-sticky
----------------------------------------- */
-#header {
-    height: 100vh;
-    padding: 40px 50px;
-    position: sticky;
-    top: 0px;
-}
-
-#header .sticky {
-    height: 100%;
-    position: relative;
-}
-
-#header .sticky .site-title {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 2.5rem;
-}
-
-#sticky .site-title {
-
-}
-
-#header .sticky .aroow {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-.HomeNavDots-list-item {
-    width: 26px;
-    height: 26px;
-}
-
 .read-btn {
     width: 150px;
     height: 50px;
@@ -84,27 +49,152 @@ sticky
     text-align: center;
 }
 
+/* ----------------------------------------
+fixed
+---------------------------------------- */
+
+#home .fixed .site-title {
+    position: fixed;
+    /* position: absolute; */
+    top: 40px;
+    right: 50px;
+    font-size: 2.5rem;
+}
+
+
+/*========= ハンバーガーメニュー ===============*/
+#home .fixed .navi {
+    display: none;
+}
+
+#home .fixed .openbtn-area {
+    height: 46px;
+    display: flex;
+    position: fixed;
+    top: 40px;
+    left: 50px;
+    cursor: pointer;
+}
+
+#home .fixed .openbtn-circle {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    transition: box-shadow 0.5s;
+    background: #becdd6;
+    box-shadow:  5px 5px 9px #859096,
+                -5px -5px 9px #f7ffff;
+}
+
+#home .fixed .text-switch {
+    margin: auto 0 auto 10px;
+}
+
+#home .fixed .openbtn {
+    transition: all .6s;
+}
+
+#home .fixed span {
+    display: inline-block;
+    /* transition: all .4s; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 6px;
+    background-color: #ff0000;
+}
+
+#home .fixed span:nth-child(1) {
+    top: 11px;
+}
+
+#home .fixed span:nth-child(2) {
+    top: 20px;
+}
+
+#home .fixed span:nth-child(3) {
+    top: 29px;
+}
+
+/*activeクラスが付与されると .openbtn-areaが360度回転し、その中の線が回転して×に*/
+#home .openbtn-circle.active .openbtn-circle {
+    transform: rotate(360deg);
+}
+
+#home .openbtn-area.active span:nth-child(1) {
+    /* top: 18px;
+    left: 18px; */
+    -webkit-transform: translateY(6px) rotate(-45deg);
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+#home .openbtn-area.active span:nth-child(2) {
+    opacity: 0;
+}
+
+#home .openbtn-area.active span:nth-child(3) {
+    -webkit-transform: translateY(-6px) rotate(45deg);
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+#home .fixed .arrow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.fixed .HomeNavDots-list-item {
+    width: 26px;
+    height: 26px;
+}
+
 /*========= ページネーションCSS ===============*/
 .pagination {
-    position: absolute;
-    right: 30px;
+    position: fixed;
+    right: 80px;
     top: 50%;
     transform: translateY(-50%);
-    /* list-style: none; */
 }
-/* 
-.pagination li {
-    width: 30px;
-    height: 30px;
-} */
 
-.pagination-list {
+.pagination a {
+    display: block;
+    height: 30px;
+    width: 30px;
+    color: #bcbcbc;
     position: relative;
-    height: 30px;
-    width: 30px;
 }
 
-.pagination-item {
+.pagination a.active:after {
+    background-color: #becdd6;
+    box-shadow:  1px 1px 2px #859096,
+             -1px -1px 2px #f7ffff;
+}
+
+/* 現在地のテキスト設定 */
+.pagination a .hover-text {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transform: translateY(-50%);
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    padding-right: 15px;
+}
+
+.pagination a:hover .hover-text {
+    opacity: 1;
+    color: #9BC6BD;
+}
+
+/* 丸の部分 */
+.pagination a:after { 
+    /* -webkit-transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.5s ease; */
     position: absolute;
     top: 10px;
     left: 10px;
@@ -112,17 +202,20 @@ sticky
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #bcbcbc;
-}
-
-.pagination-item .active {
-    background-color: #ff0000;
+    background: #becdd6;
+    box-shadow: inset 1px 1px 2px #859096,
+                inset -1px -1px 2px #f7ffff;
+    
+    
+    content: "";
 }
 
 /* ----------------------------------------
 home
 ---------------------------------------- */
+
 #home {
+    position: relative;
 }
 
 #home .title {
@@ -133,12 +226,47 @@ home
     top: 50%;
     left: 50%;
     transform: translate(-50%,-60%);
+    font-weight: 400;
+    color: #becdd6;
+    /* background: #becdd6; */
+    text-shadow:  5px 5px 10px #859096,
+    -5px -5px 10px #f7ffff;
+    /* color: #859096;
+    background: 5px 5px 10px #f7ffff;
+    text-shadow: 0 2px 1px #becdd6; */
+
+}
+
+#home .btn-scroll {
+    width: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -25px;
+
+    /* transition: opacity .8s; */
+}
+
+#home .btn-scroll-text {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#home .btn-scroll-line {
+    display: block;
+    position: relative;
+    height: 40px;
+    width: 1px;
+    left: 50%;
+    border-left: solid 1px #9BC6BD;
 }
 
 /* ----------------------------------------
 about
 ---------------------------------------- */
 #about {
+
     width: 100%;
     display: flex;
 }
@@ -151,13 +279,24 @@ about
     width: 50%;
 }
 
+/* ----------------------------------------
+works
+---------------------------------------- */
+#works {
+}
 
+
+/* ----------------------------------------
+contact
+---------------------------------------- */
+#contact {
+}
 
 /* ----------------------------------------
 footer
 ---------------------------------------- */
 #footer {
     padding: 40px 50px;
-    position: sticky;
+    position: fixed;
     bottom: 0;
 }
