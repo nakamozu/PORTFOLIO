@@ -16,7 +16,7 @@
         
     </header>
     <main id="main">
-        <section id="home" class="box" data-section-name="home">
+        <section id="home" class="box" data-section-name="Home">
 
             <div class="fixed">
                 <p class="site-title">
@@ -60,9 +60,9 @@
             </div>
         </section>
 
-        <section id="about" class="box" data-section-name="about">
+        <section id="about" class="box" data-section-name="About">
             <div class="left">
-                <img src="img\プロフィール写真（グレースケール）.png" alt="">
+                <!-- <img src="img\プロフィール写真（グレースケール）.png" alt=""> -->
             </div>
             <div class="right">
                 <div class="about-text">
@@ -80,11 +80,43 @@
             </div>
         </section>
 
-        <section id="works" class="box" data-section-name="works">
-            <h2>works</h2>
+        <section id="works" class="box" data-section-name="Works">
+            <!-- スライダー全体のコンテナ -->
+            <div class="swiper">
+                <h2>works</h2>
+                <div class="swiper-wrapper" style="none">
+                    <!-- スライドさせるアイテム -->
+                    <div class="swiper-slide">
+                        <a href=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href=""></a>
+                    </div>
+                    <!-- <div class="swiper-slide">
+                        <a href=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href=""></a>
+                    </div> -->
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
 
-        <section id="contact" class="box" data-section-name="contact">
+        <section id="contact" class="box" data-section-name="Contact">
             <div class="page-top">
                 <div class="page-top-text">PAGE TOP</div>
                 <div class="page-top-arrow"></div>
@@ -109,8 +141,12 @@
     <!-- js用 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
+    <!-- 画面スクロール -->
     <script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1/jquery.scrollify.min.js"></script>
+    <!-- スライダー -->
+    <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
     <script src="js/main.js"></script>
+
 </body>
 </html>

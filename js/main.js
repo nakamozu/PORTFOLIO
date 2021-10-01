@@ -1,9 +1,23 @@
-$(function(){
+$(function(){    
+  
+  // $(document).ready(function () {
+  //   hsize = $(window).height();
+  //   $(".box").css("height", hsize + "px");
+  // });
+  // $(window).resize(function () {
+  //   hsize = $(window).height();
+  //   $(".box").css("height", hsize + "px");
+  // });
+
     // 1ページスクロール
     $.scrollify ({
         section : ".box",
         scrollbars: false,
+        setHeights: false,
         scrollSpeed: 800,
+        // before:function(i,panels){
+        //   current = i;
+        // },
 
     //以下、ページネーション設定
       before:function(i,panels) {  // [i]は表示されている画面のIndex番号（idx）
@@ -28,6 +42,45 @@ $(function(){
         $(".btn-scroll a").on("click",$.scrollify.move);
       }
     });
+    // $(window).on('resize',function(){
+    //   if(current){
+    //     var currentScrl = $('.box').eq(current).offset().top;
+    //     $(window).scrollTop(currentScrl);
+    //   }
+    // });
+
+    
+    // スライダー
+    const carouselModule = (() => {
+      return {
+        configure: () => {
+          const mySwiper = new Swiper('.swiper', {
+            // ここからオプション
+            spaceBetween: 0,
+            slidesPerView: 3,
+            loop: true,
+            pagination: {
+              el: '.swiper-pagination',
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            scrollbar: {
+              el: '.swiper-scrollbar',
+              draggable: true,
+
+            },
+            // autoplay: {
+            //   delay: 5000,
+            // },
+          });
+        }
+      }
+    })()
+
+    carouselModule.configure()
+
 
     // ハンバーガーメニュー
     $(".openbtn-area").click(function(){

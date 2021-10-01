@@ -49,6 +49,10 @@ li {
     text-align: center;
 }
 
+#main {
+    height: 100%;
+}
+
 /* ----------------------------------------
 fixed
 ---------------------------------------- */
@@ -162,7 +166,7 @@ fixed
 /*========= ページネーションCSS ===============*/
 .pagination {
     position: fixed;
-    right: 80px;
+    right: 50px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -184,13 +188,13 @@ fixed
 /* 現在地のテキスト設定 */
 .pagination a .hover-text {
     position: absolute;
-    right: 15px;
+    left: 15px;
     top: 15px;
     transform: translateY(-50%);
     opacity: 0;
     -webkit-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease;
-    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .pagination a:hover .hover-text {
@@ -266,8 +270,6 @@ home
 about
 ---------------------------------------- */
 #about {
-
-    width: 100%;
     display: flex;
 }
 
@@ -277,6 +279,7 @@ about
 
 #about .right {
     width: 40%;
+    height: 100%;
     position: relative;
 }
 
@@ -309,8 +312,9 @@ about
     position: absolute;
     left: 0;
     top: 45%;
+    display: inline-block;
     font-size: 1.6rem;
-    line-height: 1.4;
+    line-height: 2.8rem;
 }
 
 #about .right .read-btn {
@@ -340,14 +344,69 @@ about
 works
 ---------------------------------------- */
 #works {
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#works .swiper {
+    position: relative;
+    width: calc(100% - 15%);
+    height: calc(100% - 40%);
+    border-radius: 30px;
+    background: #becdd6;
+    box-shadow: inset 20px 20px 40px #859096,
+                inset -20px -20px 40px #f7ffff;
+}
+
+#works .swiper h2 {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    font-size: 3.5rem;
+    color: #f00;
+    text-shadow:  2px 2px 3px #859096,
+                -2px -2px 3px #f7ffff;
+}
+
+#works .swiper .swiper-wrapper {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 2%;
+}
+
+#works .swiper .swiper-wrapper .swiper-slide {
+    display: flex;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 0 4%;
+    border-radius: 50%;
+    background: #becdd6;
+    box-shadow:  15px 15px 30px #859096,
+    -15px -15px 30px #f7ffff;
+}
+
+#works .swiper .swiper-wrapper .swiper-slide::before {
+    padding-top: 100%;
+    content: "";
+    display: block;
 }
 
 
 /* ----------------------------------------
 contact
 ---------------------------------------- */
-#contact {
-}
+/* #contact {
+} */
 
 /* ----------------------------------------
 footer
