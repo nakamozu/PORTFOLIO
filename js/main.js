@@ -51,35 +51,51 @@ $(function(){
 
     
     // スライダー
-    const carouselModule = (() => {
-      return {
-        configure: () => {
-          const mySwiper = new Swiper('.swiper', {
-            // ここからオプション
-            spaceBetween: 0,
-            slidesPerView: 3,
-            loop: true,
-            pagination: {
-              el: '.swiper-pagination',
-            },
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-            scrollbar: {
-              el: '.swiper-scrollbar',
-              draggable: true,
+    // const carouselModule = (() => {
+    //   return {
+    //     configure: () => {
+    //       const mySwiper = new Swiper('.swiper', {
+    //         // ここからオプション
+    //         spaceBetween: 0,
+    //         slidesPerView: 3,
+    //         loop: true,
+    //         pagination: {
+    //           el: '.swiper-pagination',
+    //         },
+    //         navigation: {
+    //           nextEl: '.swiper-button-next',
+    //           prevEl: '.swiper-button-prev',
+    //         },
+    //         scrollbar: {
+    //           el: '.swiper-scrollbar',
+    //           draggable: true,
 
-            },
-            // autoplay: {
-            //   delay: 5000,
-            // },
-          });
-        }
-      }
-    })()
+    //         },
+    //         // autoplay: {
+    //         //   delay: 5000,
+    //         // },
+    //       });
+    //     }
+    //   }
+    // })()
 
-    carouselModule.configure()
+    // carouselModule.configure()
+
+    //slickスライダー
+    $('.slick-area').slick({
+      arrows: true,
+      // prevArrow: ,
+      // nextArrow: ,
+      // centerMode: true, // センターモード（＝両端見切れ状態）になる
+      // centerPadding: '4%', // センターモード時、見切れたコンテンツの幅をpx指定できる
+      slidesToShow: 1,
+      slideToShow: 3,
+      focusOnSelect: true,	//クリックした箇所に飛ぶ
+      swipeToSlide: true,
+      variableWidth: true,
+      dots: true,
+      fade: true,
+    });
 
 
     // ハンバーガーメニュー
