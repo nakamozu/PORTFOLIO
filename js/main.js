@@ -56,11 +56,13 @@ $(function(){
         configure: () => {
           const mySwiper = new Swiper('.swiper', {
             // ここからオプション
-            spaceBetween: 0,
-            slidesPerView: 3,
+            speed: 1500,
+            slidesPerView: 1,
             loop: true,
+            effect: 'fade',
             pagination: {
               el: '.swiper-pagination',
+              clickable: true,
             },
             navigation: {
               nextEl: '.swiper-button-next',
@@ -69,8 +71,17 @@ $(function(){
             scrollbar: {
               el: '.swiper-scrollbar',
               draggable: true,
-
             },
+            fadeEffect: {
+              crossFade: true // クロスフェードさせる
+            },
+            on: {
+              slideChange: function(){
+                jQuery('.swiper-slide-text').css('opacity', '0');
+                realIndex = this.realIndex + 1;
+                jQuery('.swiper-slide-text-'+ realIndex).css('opacity', '1');
+              }
+            }
             // autoplay: {
             //   delay: 5000,
             // },
@@ -80,7 +91,6 @@ $(function(){
     })()
 
     carouselModule.configure()
-
 
     // ハンバーガーメニュー
     $(".openbtn-area").click(function(){

@@ -344,63 +344,63 @@ about
 works
 ---------------------------------------- */
 #works {
-    /* position: relative; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#works .swiper {
     position: relative;
-    width: calc(100% - 15%);
-    height: calc(100% - 40%);
-    border-radius: 30px;
-    background: #becdd6;
-    box-shadow: inset 20px 20px 40px #859096,
-                inset -20px -20px 40px #f7ffff;
 }
 
-#works .swiper h2 {
+#works .left {
     position: absolute;
-    top: 8%;
-    left: 8%;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: calc(100% - 80%);
+    height: calc(100% - 40%);
+}
+
+#works .left h2 {
     font-size: 3.5rem;
     color: #f00;
     text-shadow:  2px 2px 3px #859096,
                 -2px -2px 3px #f7ffff;
 }
 
-#works .swiper .swiper-wrapper {
-    position: absolute;
-    top: 0%;
-    right: 0%;
+#works .left .swiper-slide-text {
+    opacity: 0;
+    transition: all 2s ease 0s;
+}
 
+#works .left .swiper-slide-text .slide-title {
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    font-size: 2.5rem;
+}
+
+#works .left .swiper-slide-text .slide-comment {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+}
+
+#works .right {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: calc(100% - 45%);
+    height: calc(100% - 40%);
+    border-radius: 30px;
+    background: #becdd6;
+    box-shadow: inset 20px 20px 40px #859096,
+                inset -20px -20px 40px #f7ffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    padding: 0 2%;
 }
 
-#works .swiper .swiper-wrapper .swiper-slide {
-    display: flex;
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    margin: 0 4%;
-    border-radius: 50%;
-    background: #becdd6;
-    box-shadow:  15px 15px 30px #859096,
-    -15px -15px 30px #f7ffff;
+#works .swiper {
+    width: calc(100% - 20%);
+    height: calc(100% - 20%);
 }
-
-#works .swiper .swiper-wrapper .swiper-slide::before {
-    padding-top: 100%;
-    content: "";
-    display: block;
-}
-
 
 /* ----------------------------------------
 contact

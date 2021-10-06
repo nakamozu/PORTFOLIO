@@ -81,32 +81,51 @@
         </section>
 
         <section id="works" class="box" data-section-name="Works">
-            <!-- スライダー全体のコンテナ -->
-            <div class="swiper">
+            <div class="left">
                 <h2>works</h2>
-                <div class="swiper-wrapper" style="none">
-                    <!-- スライドさせるアイテム -->
-                    <div class="swiper-slide">
-                        <a href=""></a>
+                <!-- スライダーに対応したテキスト -->
+                <div class="swiper-slide-text swiper-slide-text-1">
+                    <p class="slide-title">タイトル1</p>
+                    <p class="slide-comment">あいうえおかきくけこさしすせそ</p>
+                </div>
+                <div class="swiper-slide-text swiper-slide-text-2">
+                    <p class="slide-title">タイトル2</p>
+                    <p class="slide-comment">たちつてとなにぬねのはひふへほ</p>
+                </div>
+                <div class="swiper-slide-text swiper-slide-text-3">
+                    <p class="slide-title">タイトル3</p>
+                    <p class="slide-comment">まみむめもやゆよらりるれろわをん</p>
+                </div>
+
+            </div>
+                
+            <!-- スライダー全体のコンテナ -->
+            <div class="right">
+                <div class="swiper">                
+                    <div class="swiper-wrapper">
+                        <!-- スライドさせるアイテム -->
+                        <div class="swiper-slide" style="background-color: aqua;">
+                            <a href=""></a>
+                        </div>
+                        <div class="swiper-slide" style="background-color: bisque;">
+                            <a href=""></a>
+                        </div>
+                        <div class="swiper-slide" style="background-color: brown;">
+                            <a href=""></a>
+                        </div>
+                        <!-- <div class="swiper-slide">
+                            <a href=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href=""></a>
+                        </div> -->
                     </div>
-                    <div class="swiper-slide">
-                        <a href=""></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href=""></a>
-                    </div>
-                    <!-- <div class="swiper-slide">
-                        <a href=""></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href=""></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href=""></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href=""></a>
-                    </div> -->
                 </div>
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
@@ -139,13 +158,14 @@
     </footer>
 
     <!-- js用 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
     <!-- 画面スクロール -->
     <script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1/jquery.scrollify.min.js"></script>
     <!-- スライダー -->
-    <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>
