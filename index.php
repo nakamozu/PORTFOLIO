@@ -31,7 +31,9 @@
                         <li><p>&copy; KAZUYA NAKAMOTO.</p></li>
                     </ul>
                 </nav>
-    
+
+                <div class="btn"></div>
+                
                 <div class="openbtn-area">
                     <div class="openbtn-circle">
                         <div class="openbtn">
@@ -42,7 +44,6 @@
                     </div>
                     <p class="text-switch">PORTFOLIO</p>
                 </div>
-    
                 <div id="mask"></div>
                 
                 <div class="arrow"></div>
@@ -52,11 +53,11 @@
             <h1 class="title">KAZUYA<br>NAKAMOTO</h1>
             <div class="btn-scroll">
                 <div class="btn-scroll-text">
-                    <a href="#about">
+                    <a href="#About">
                         SCROLL
+                        <div class="btn-scroll-line"></div>
                     </a>
                 </div>
-                <div class="btn-scroll-line"></div>
             </div>
         </section>
 
@@ -82,7 +83,7 @@
 
         <section id="works" class="box" data-section-name="Works">
             <div class="left">
-                <h2>works</h2>
+                <h2>WORKS</h2>
                 <!-- スライダーに対応したテキスト -->
                 <div class="swiper-slide-text swiper-slide-text-1">
                     <p class="slide-title">タイトル1</p>
@@ -136,12 +137,38 @@
         </section>
 
         <section id="contact" class="box" data-section-name="Contact">
-            <div class="page-top">
-                <div class="page-top-text">PAGE TOP</div>
-                <div class="page-top-arrow"></div>
+            <div class="contact-inner">
+                <div class="text-area">
+                    <h2>CONTACT</h2>
+                    <p>お問い合わせはこちらのフォームより受け付けております。</p>
+                    <p>以下の内容をご記入お願いいたします。</p>
+                </div>
+                <form id="sendmail" action="mail.php" method="post" class="form-area">
+                    <dl>
+                        <dt><label for="name">お名前</label></dt>
+                        <dd><input autocomplete="off" type="text" name="name" required></dd>
+
+                        <dt><label for="email">メールアドレス</label></dt>
+                        <dd><input autocomplete="off" type="email" name="email" required></dd>
+
+                        <dt><label>お問い合わせ内容</label></dt>
+                        <dd><textarea name="comment" required></textarea></dd>
+                    </dl>
+                    <button type="submit">送信</button>
+                </form>
+                <p id="msg"></p>
+                <div class="page-top">
+                    <a href="#Home">
+                        <div class="page-top-arrow"></div>
+                        <div class="page-top-text">
+                        PAGE TOP
+                        </div>
+                    </a>                    
+                </div>
             </div>
         </section>
     </main>
+    
     <footer id="footer">
         <ul class="sns-list">
             <li class="sns-icon">
@@ -158,12 +185,10 @@
     </footer>
 
     <!-- js用 -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
-    <!-- 画面スクロール -->
+    <!-- 画面スクロール（scrollify） -->
     <script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1/jquery.scrollify.min.js"></script>
-    <!-- スライダー -->
+    <!-- スライダー（swiper） -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
