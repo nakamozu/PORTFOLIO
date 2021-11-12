@@ -58,7 +58,10 @@ try {
         //メール表題（タイトル）
         $mail->Subject = mb_encode_mimeheader($name.'様からお問い合わせです'); 
         //本文（HTML用）
-        $mail->Body  = mb_convert_encoding($comment,"JIS","UTF-8");  
+        // $mail->Body  = mb_convert_encoding('お名前：'.$name.'様'."\n".'メールアドレス：'.$email."\n".'お問い合わせ内容：'.$comment,"JIS","UTF-8"); 
+        $mail->Body  = mb_convert_encoding('お名前：'.$name.' 様'."<br>".
+                                            'メールアドレス：'.$email."<br>".
+                                            'お問い合わせ内容：'.$comment,"JIS","UTF-8"); 
         //テキスト表示の本文
         $mail->AltBody = mb_convert_encoding('プレインテキストメッセージ non-HTML mail clients',"JIS","UTF-8");  
         //送信
