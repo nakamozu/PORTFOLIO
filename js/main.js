@@ -1,4 +1,21 @@
-$(function(){    
+$(function(){
+
+    // ハンバーガーメニュー
+    $(".openbtn-circle").click(function(){
+        $(this).toggleClass('active');
+        if ($(this).hasClass('active')){
+            $('.navi').addClass('active');
+            $('.inner').addClass('fade');
+        } else {
+            $('.navi').removeClass('active');
+            $('.inner').removeClass('fade');
+        }
+    });
+
+    $(".nav-item a[href]").on("click",function(event){
+        $(".openbtn-circle").trigger('click');
+    });
+
     // 1ページスクロール
     $.scrollify ({
         section : ".box",
@@ -72,11 +89,6 @@ $(function(){
     })()
 
         carouselModule.configure()
-
-        // ハンバーガーメニュー
-        $(".openbtn-circle").click(function(){
-            $(this).toggleClass('active');
-        });
 
         // お問い合わせフォーム
         // 送信ボタンをクリックされたら

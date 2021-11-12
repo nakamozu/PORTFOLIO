@@ -59,147 +59,186 @@ fixed
 
 #home .fixed .site-title {
     position: fixed;
+    z-index: 1000;
     top: 40px;
     right: 50px;
     font-size: 2.5rem;
     font-weight: 400;
     color: #717679;
-    /* text-shadow:  -1px -1px 2px #859096,
-    0.5px 0.5px 2px #f7ffff; */
-
-
 }
 
 
 /*========= ハンバーガーメニュー ===============*/
-#home .fixed .navi {
-    display: none;
+#home .navi {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background: #becdd6;
+    opacity: 0;
+    transition: opacity 1s .7s;
+    pointer-events: none;
 }
 
-#home .fixed .openbtn-area {
+#home .navi.active {
+    opacity: 1;
+    pointer-events: painted;
+    transition: opacity 0.5s;
+}
+
+#home .nav-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+#home .nav-item {
+    font-size: 10rem;
+    background: #becdd6;
+    text-shadow:  4px 4px 8px #859096,
+                -4px -4px 8px #f7ffff;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    padding: 2% 0;
+}
+
+
+#home .navi.active .nav-item {
+    opacity: 1;
+    transition: opacity 1s .7s;
+}
+
+#home .navi.active .nav-item a:hover {
+    text-shadow:  2px 2px 4px #859096,
+                -2px -2px 4px #f7ffff;
+}
+
+#home .nav-item a {
+    color: #becdd6;
+    display: inline-block;
+    line-height: 1;
+}
+
+#home .nav-item a p {
+    /* display: block; */
+    height: auto;
+}
+
+#home .copyright {
+    position: absolute;
+    height: 4%;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .copyright p {
+    display: block;
+    /* margin: auto; */
+}
+
+#home .openbtn-area  {
     height: 46px;
     display: flex;
     position: fixed;
+    z-index: 9999;
     top: 40px;
     left: 50px;
-    z-index: 10;
-    cursor: pointer;
 }
 
-.btn {
+#home .openbtn-circle {
     position: relative;
-    left: 20%;
     width: 46px;
     height: 46px;
+    cursor: pointer;
     border-radius: 50%;
-    transition: box-shadow 0.6s;
+    transition: box-shadow 0.2s;
+    /* transition: after 0.8s; */
     background: #becdd6;
     box-shadow:  5px 5px 9px #859096,
                 -5px -5px 9px #f7ffff;
 }
 
-.btn:active {
+#home .openbtn-circle:active {
     box-shadow: none;
 }
 
-#home .fixed .openbtn-circle {
-    position: relative;
-    cursor: pointer;
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    transition: box-shadow 0.5s;
-    background: #becdd6;
-    box-shadow:  5px 5px 9px #859096,
-                -5px -5px 9px #f7ffff;
-}
-
-#home .fixed .openbtn-circle::after {
+#home .openbtn-circle::before {
+    content: 'PORTOFORIO';
     position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    transition: box-shadow 0.5s;
-    background: red;
-    box-shadow:  5px 5px 9px #859096,
-                -5px -5px 9px #f7ffff;
+    top: 50%;
+    left: 130%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    opacity: 1;
+    transition: 1s .7s;
+}
+
+#home  .openbtn-circle.active::before {
     opacity: 0;
+    transition: 0.5s;
 }
 
-#home .fixed .text-switch {
-    margin: auto 0 auto 10px;
+#home .openbtn-circle::after {
+    content: 'CLOSE';
+    position: absolute;
+    top: 50%;
+    left: 130%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: 0.5s;
 }
 
-#home .fixed .openbtn {
-    transition: all .6s;
-    width: 46px;
-    height: 46px;
+#home  .openbtn-circle.active::after {
+    opacity: 1;
+    transition: 1s .7s;
 }
 
-#home .fixed span {
+#home .openbtn span {
     display: inline-block;
-    transition: all .4s;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     width: 10px;
     height: 6px;
-    /* background: #717679; */
     background: #becdd6;
     box-shadow: inset 1px 1px 2px #859096,
                 inset -1px -1px 2px #f7ffff;
+    transition: all 1s;
+
 }
 
-#home .fixed span:nth-of-type(1) {
+#home .openbtn span:nth-of-type(1) {
     top: 11px;
 }
 
-#home .fixed span:nth-of-type(2) {
+#home .openbtn span:nth-of-type(2) {
     top: 20px;
 }
 
-#home .fixed span:nth-of-type(3) {
+#home .openbtn span:nth-of-type(3) {
     top: 29px;
 }
 
-#home .openbtn-circle.active {
+#home .openbtn-circle.active span:nth-of-type(1),
+#home .openbtn-circle.active span:nth-of-type(3) {
     box-shadow: none;
 }
 
-#home .openbtn-circle.active .openbtn-circle::after {
-    opacity: 1;
-    background-color: red;
-}
-
-/*activeクラスが付与されると .openbtn-areaが360度回転し、その中の線が回転して×に*/
-#home .openbtn-circle.active .openbtn {
-    /* transform: rotate(360deg); */
-}
-
-#home .openbtn-circle.active span:nth-of-type(1) {
+#home .openbtn-circle.active span:nth-of-type(1),
+#home .openbtn-circle.active span:nth-of-type(3) {
     opacity: 0;
-    /* top: 18px;
-    left: 18px;
-    -webkit-transform: translateY(6px) rotate(-45deg);
-    transform: translateY(6px) rotate(-45deg);
-    width: 30%; */
+    transition: all .5s;
 }
 
 #home .openbtn-circle.active span:nth-of-type(2) {
-    opacity: 0;
-}
-
-#home .openbtn-circle.active span:nth-of-type(3) {
-    opacity: 0;
-    /* top: 30px;
-    left: 18px;
-    -webkit-transform: translateY(-6px) rotate(45deg);
-    transform: translateY(-6px) rotate(45deg);
-    width: 30%; */
+    width: 20px;
 }
 
 #home .fixed .arrow {
@@ -232,8 +271,8 @@ fixed
 
 .pagination a.active:after {
     background-color: #f00;
-    box-shadow:  1px 1px 2px #859096,
-                -1px -1px 2px #f7ffff;
+    box-shadow: inset 1.5px 1.5px 2px #859096,
+                inset -1.5px -1.5px 2px #f7ffff;
 }
 
 /* 現在地のテキスト設定 */
@@ -265,9 +304,10 @@ fixed
     height: 10px;
     border-radius: 50%;
     background: #becdd6;
-    box-shadow: inset 1px 1px 2px #859096,
-                inset -1px -1px 2px #f7ffff;
+    box-shadow:  1.5px 1.5px 2px #859096,
+                -1.5px -1.5px 2px #f7ffff;
     content: "";
+    transition: all .2s;
 }
 
 /* ----------------------------------------
@@ -326,6 +366,28 @@ about
 
 #about .left {
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .left .img-box {
+    width: 430px;
+    height: 590px;
+    /* padding: 10px; */
+    border-radius: 30px;
+    background: #becdd6;
+    box-shadow: inset 8px 8px 16px #859096,
+                inset -8px -8px 16px #f7ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .left img {
+    object-fit: cover;
+    border-radius: 30px;
+    width: 88%;
 }
 
 #about .right {
@@ -380,6 +442,11 @@ about
     box-shadow:  5px 5px 10px #859096,
                 -5px -5px 10px #f7ffff;
     text-align: center;
+    transition: all 0.2s;
+}
+
+#about .read-btn:active {
+    box-shadow: none;
 }
 
 #about .right .read-btn .readmore {
@@ -540,6 +607,11 @@ contact
     background: #becdd6;
     box-shadow:  5px 5px 10px #859096,
                 -5px -5px 10px #f7ffff;
+    transition: all 0.2s;
+}
+
+#contact .contact-inner .form-area button:active {
+    box-shadow: none;
 }
 
 #contact .contact-inner .page-top {
@@ -555,5 +627,6 @@ footer
 #footer {
     padding: 40px 50px;
     position: fixed;
+    z-index: 1000;
     bottom: 0;
 }

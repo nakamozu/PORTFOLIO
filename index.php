@@ -24,16 +24,14 @@
                 </p>
                 <nav class="navi">
                     <ul class="nav-menu">
-                        <li><a href="#home">HOME</a></li>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#works">WORKS</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                        <li><p>&copy; KAZUYA NAKAMOTO.</p></li>
+                        <li class="nav-item"><a href="#home"><p>HOME</p></a></li>
+                        <li class="nav-item"><a href="#about"><p>ABOUT</p></a></li>
+                        <li class="nav-item"><a href="#works"><p>WORKS</p></a></li>
+                        <li class="nav-item"><a href="#contact"><p>CONTACT</p></a></li>
+                        <li class="copyright"><p>&copy; KAZUYA NAKAMOTO.</p></li>
                     </ul>
                 </nav>
 
-                <div class="btn"></div>
-                
                 <div class="openbtn-area">
                     <div class="openbtn-circle">
                         <div class="openbtn">
@@ -42,128 +40,134 @@
                             <span></span>
                         </div>
                     </div>
-                    <p class="text-switch">PORTFOLIO</p>
                 </div>
-                <div id="mask"></div>
-                
+
                 <div class="arrow"></div>
             </div>
 
-
-            <h1 class="title">KAZUYA<br>NAKAMOTO</h1>
-            <div class="btn-scroll">
-                <div class="btn-scroll-text">
-                    <a href="#About">
-                        SCROLL
-                        <div class="btn-scroll-line"></div>
-                    </a>
+            
+                <h1 class="title">KAZUYA<br>NAKAMOTO</h1>
+                <div class="btn-scroll">
+                    <div class="btn-scroll-text">
+                        <a href="#About">
+                            SCROLL
+                            <div class="btn-scroll-line"></div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="about" class="box" data-section-name="About">
-            <div class="left">
-                <!-- <img src="img\プロフィール写真（グレースケール）.png" alt=""> -->
-            </div>
-            <div class="right">
-                <div class="about-text">
-                    <h2>ABOUT</h2>
-                    <p>中本 和哉</p>
-                    <p>Kazuya Nakamoto</p>
-                    <p>広島県生まれ。地元の小中学校を卒業後、広島市内の工業高校へ進学。<br>
-                        3年間建築を学び、専門学校ではインテリアデザインを学ぶ。<br>
-                        広島のマンションリフォームの会社に約2年間勤め、<br>
-                        転職のためにTECH I.S.でプログラミングを学習中。</p>
+            
+                <div class="left">
+                    <div class="img-box">
+                        <img src="宣材写真\プロフィール写真1.JPG" alt="プロフィール写真">
+                    </div>
                 </div>
-                <span class="read-btn">
-                    <a class="readmore" href="">READ MORE →</a>
-                </span>
+                <div class="right">
+                    <div class="about-text">
+                        <h2>ABOUT</h2>
+                        <p>中本 和哉</p>
+                        <p>Kazuya Nakamoto</p>
+                        <p>広島県生まれ。地元の小中学校を卒業後、広島市内の工業高校へ進学。<br>
+                            3年間建築を学び、専門学校ではインテリアデザインを学ぶ。<br>
+                            広島のマンションリフォームの会社に約2年間勤め、<br>
+                            転職のためにTECH I.S.でプログラミングを学習中。</p>
+                    </div>
+                    <span class="read-btn">
+                        <a class="readmore" href="profile.html">READ MORE →</a>
+                    </span>
+                </div>
             </div>
         </section>
 
         <section id="works" class="box" data-section-name="Works">
-            <div class="left">
-                <h2>WORKS</h2>
-                <!-- スライダーに対応したテキスト -->
-                <div class="swiper-slide-text swiper-slide-text-1">
-                    <p class="slide-title">タイトル1</p>
-                    <p class="slide-comment">あいうえおかきくけこさしすせそ</p>
-                </div>
-                <div class="swiper-slide-text swiper-slide-text-2">
-                    <p class="slide-title">タイトル2</p>
-                    <p class="slide-comment">たちつてとなにぬねのはひふへほ</p>
-                </div>
-                <div class="swiper-slide-text swiper-slide-text-3">
-                    <p class="slide-title">タイトル3</p>
-                    <p class="slide-comment">まみむめもやゆよらりるれろわをん</p>
-                </div>
-
-            </div>
-                
-            <!-- スライダー全体のコンテナ -->
-            <div class="right">
-                <div class="swiper">                
-                    <div class="swiper-wrapper">
-                        <!-- スライドさせるアイテム -->
-                        <div class="swiper-slide" style="background-color: aqua;">
-                            <a href=""></a>
-                        </div>
-                        <div class="swiper-slide" style="background-color: bisque;">
-                            <a href=""></a>
-                        </div>
-                        <div class="swiper-slide" style="background-color: brown;">
-                            <a href=""></a>
-                        </div>
-                        <!-- <div class="swiper-slide">
-                            <a href=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href=""></a>
-                        </div> -->
+            
+                <div class="left">
+                    <h2>WORKS</h2>
+                    <!-- スライダーに対応したテキスト -->
+                    <div class="swiper-slide-text swiper-slide-text-1">
+                        <p class="slide-title">タイトル1</p>
+                        <p class="slide-comment">あいうえおかきくけこさしすせそ</p>
+                    </div>
+                    <div class="swiper-slide-text swiper-slide-text-2">
+                        <p class="slide-title">タイトル2</p>
+                        <p class="slide-comment">たちつてとなにぬねのはひふへほ</p>
+                    </div>
+                    <div class="swiper-slide-text swiper-slide-text-3">
+                        <p class="slide-title">タイトル3</p>
+                        <p class="slide-comment">まみむめもやゆよらりるれろわをん</p>
                     </div>
                 </div>
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
 
-                <div class="swiper-pagination"></div>
+                <!-- スライダー全体のコンテナ -->
+                <div class="right">
+                    <div class="swiper">                
+                        <div class="swiper-wrapper">
+                            <!-- スライドさせるアイテム -->
+                            <div class="swiper-slide" style="background-color: aqua;">
+                                <a href=""></a>
+                            </div>
+                            <div class="swiper-slide" style="background-color: bisque;">
+                                <a href=""></a>
+                            </div>
+                            <div class="swiper-slide" style="background-color: brown;">
+                                <a href=""></a>
+                            </div>
+                            <!-- <div class="swiper-slide">
+                                <a href=""></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href=""></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href=""></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href=""></a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </section>
 
         <section id="contact" class="box" data-section-name="Contact">
-            <div class="contact-inner">
-                <div class="text-area">
-                    <h2>CONTACT</h2>
-                    <p>お問い合わせはこちらのフォームより受け付けております。</p>
-                    <p>以下の内容をご記入お願いいたします。</p>
-                </div>
-                <form id="sendmail" action="mail.php" method="post" class="form-area">
-                    <dl>
-                        <dt><label for="name">お名前</label></dt>
-                        <dd><input autocomplete="off" type="text" name="name" required></dd>
+            
+                <div class="contact-inner">
+                    <div class="text-area">
+                        <h2>CONTACT</h2>
+                        <p>お問い合わせはこちらのフォームより受け付けております。</p>
+                        <p>以下の内容をご記入お願いいたします。</p>
+                    </div>
+                    <form id="sendmail" action="mail.php" method="post" class="form-area">
+                        <dl>
+                            <dt><label for="name">お名前</label></dt>
+                            <dd><input autocomplete="off" type="text" name="name" required></dd>
 
-                        <dt><label for="email">メールアドレス</label></dt>
-                        <dd><input autocomplete="off" type="email" name="email" required></dd>
+                            <dt><label for="email">メールアドレス</label></dt>
+                            <dd><input autocomplete="off" type="email" name="email" required></dd>
 
-                        <dt><label>お問い合わせ内容</label></dt>
-                        <dd><textarea name="comment" required></textarea></dd>
-                    </dl>
-                    <button type="submit">送信</button>
-                </form>
-                <p id="msg"></p>
-                <div class="page-top">
-                    <a href="#Home">
-                        <div class="page-top-arrow"></div>
-                        <div class="page-top-text">
-                        PAGE TOP
-                        </div>
-                    </a>                    
+                            <dt><label>お問い合わせ内容</label></dt>
+                            <dd><textarea name="comment" required></textarea></dd>
+                        </dl>
+                        <button type="submit">送信</button>
+                    </form>
+                    <p id="msg"></p>
+                    <div class="page-top">
+                        <a href="#Home">
+                            <div class="page-top-arrow"></div>
+                            <div class="page-top-text">
+                            PAGE TOP
+                            </div>
+                        </a>                    
+                    </div>
                 </div>
             </div>
         </section>
@@ -174,11 +178,6 @@
             <li class="sns-icon">
                 <a href="https://twitter.com/" target="_blank">
                     <img src="img\2021 Twitter logo - black.png" alt="ツイッターアイコン">
-                </a>
-            </li>
-            <li class="sns-icon">
-                <a href="https://www.instagram.com/" target="_blank">
-                    <img src="img\glyph-logo_May2016.png" alt="インスタグラムアイコン">
                 </a>
             </li>
         </ul>
