@@ -42,7 +42,6 @@ li {
 .read-btn {
     width: 150px;
     height: 50px;
-
 }
 
 .readme {
@@ -122,7 +121,6 @@ fixed
 }
 
 #home .nav-item a p {
-    /* display: block; */
     height: auto;
 }
 
@@ -135,11 +133,17 @@ fixed
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#home .navi.active .copyright {
+    opacity: 1;
+    transition: opacity 1s .7s;
 }
 
 #home .copyright p {
     display: block;
-    /* margin: auto; */
 }
 
 #home .openbtn-area  {
@@ -520,6 +524,14 @@ works
     height: calc(100% - 20%);
 }
 
+#works .swiper-slide {
+}
+
+#works .swiper-slide a {
+    height: 100%;
+    display: block;
+}
+
 /* ----------------------------------------
 contact
 ---------------------------------------- */
@@ -583,8 +595,8 @@ contact
     padding: 15px;
     border-radius: 20px;
     background: #becdd6;
-    box-shadow: inset 5px 5px 10px #838d94,
-                inset -5px -5px 10px #f9ffff;
+    box-shadow: inset 5px 5px 10px #859096,
+                inset -5px -5px 10px #f7ffff;
 }
 
 #contact .contact-inner .form-area input:-webkit-autofill{

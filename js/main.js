@@ -5,10 +5,8 @@ $(function(){
         $(this).toggleClass('active');
         if ($(this).hasClass('active')){
             $('.navi').addClass('active');
-            $('.inner').addClass('fade');
         } else {
             $('.navi').removeClass('active');
-            $('.inner').removeClass('fade');
         }
     });
 
@@ -45,6 +43,7 @@ $(function(){
             $(".pagination a").on("click",$.scrollify.move);
             $(".btn-scroll a").on("click",$.scrollify.move);
             $(".page-top a").on("click",$.scrollify.move);
+            $(".nav-item a").on("click",$.scrollify.move);
         }
     });
 
@@ -86,7 +85,7 @@ $(function(){
             });
             }
         }
-    })()
+    })();
 
         carouselModule.configure()
 
@@ -131,4 +130,44 @@ $(function(){
         });
         return false;
         });
+});
+
+// worksページ
+$(function() {
+    let tabs = $('.tab');
+    $('.tab').on('click',function(){
+        $('.active').removeClass('active');
+        $(this).addClass('active');
+        const index = tabs.index(this);
+        $('.content').removeClass('show').eq(index).addClass('show');
+    });
+});
+
+$(function() {
+    //location.hashで#以下を取得 変数hashに格納
+    var hash = location.hash;
+    //hashの中に#tab～が存在するか調べる。
+    hash = (hash.match(/^#tab\d+$/) || [])[0];
+
+    //hashに要素が存在する場合、hashで取得した文字列から#より後を取得
+    if($(hash).length){
+        var tabname = hash.slice(1);
+    } else {
+        var tabname = "tab1"; //要素が存在しない場合tab1を代入
+    }
+    // コンテンツを一度非表示
+    // $('.content').css('display','none');
+
+    //タブについているactiveを消す
+    $('.tab').removeClass('active');
+
+    var tabno = $('.tab#' + tabname).index();
+    console.log(tabno);
+
+    //クリックされたタブと同じ順番のコンテンツを表示します。
+    // $('.content').eq(tabno).fadeIn();
+
+    //クリックされたタブのみにクラスactiveをつけます。
+    $('.tab').eq(tabno).addClass('active');
+    $('.content').removeClass('show').eq(tabno).addClass('show');
 });

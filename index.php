@@ -20,14 +20,14 @@
 
             <div class="fixed">
                 <p class="site-title">
-                    KAZUYA<br>NAKAMOTO
+                    <a href="">KAZUYA<br>NAKAMOTO</a>
                 </p>
                 <nav class="navi">
                     <ul class="nav-menu">
-                        <li class="nav-item"><a href="#home"><p>HOME</p></a></li>
-                        <li class="nav-item"><a href="#about"><p>ABOUT</p></a></li>
-                        <li class="nav-item"><a href="#works"><p>WORKS</p></a></li>
-                        <li class="nav-item"><a href="#contact"><p>CONTACT</p></a></li>
+                        <li class="nav-item"><a href="#Home"><p>HOME</p></a></li>
+                        <li class="nav-item"><a href="#About"><p>ABOUT</p></a></li>
+                        <li class="nav-item"><a href="#Works"><p>WORKS</p></a></li>
+                        <li class="nav-item"><a href="#Contact"><p>CONTACT</p></a></li>
                         <li class="copyright"><p>&copy; KAZUYA NAKAMOTO.</p></li>
                     </ul>
                 </nav>
@@ -107,13 +107,13 @@
                         <div class="swiper-wrapper">
                             <!-- スライドさせるアイテム -->
                             <div class="swiper-slide" style="background-color: aqua;">
-                                <a href=""></a>
+                                <a href="works.html#tab1"></a>
                             </div>
                             <div class="swiper-slide" style="background-color: bisque;">
-                                <a href=""></a>
+                                <a href="works.html#tab2"></a>
                             </div>
                             <div class="swiper-slide" style="background-color: brown;">
-                                <a href=""></a>
+                                <a href="works.html#tab3"></a>
                             </div>
                             <!-- <div class="swiper-slide">
                                 <a href=""></a>

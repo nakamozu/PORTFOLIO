@@ -1,0 +1,315 @@
+@charset "UTF-8";
+
+html {
+    /* 1remが10px */
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Noto Sans JP';
+    font-size: 1.2rem;
+    line-height: 1;
+    color: #717679;
+    background-color: #becdd6;
+    position: relative;
+    z-index: -10;
+    width: 100%;
+    height: 100vh;
+}
+
+a {
+    color: #717679;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+li {
+    list-style: none;
+}
+
+.sns-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.read-btn {
+    width: 150px;
+    height: 50px;
+
+}
+
+.readme {
+    text-align: center;
+}
+
+#main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------------------------------------
+fixed
+---------------------------------------- */
+
+#home .fixed .site-title {
+    position: fixed;
+    z-index: 1000;
+    top: 40px;
+    right: 50px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #717679;
+}
+
+
+/*========= ハンバーガーメニュー ===============*/
+#home .navi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background: #becdd6;
+    opacity: 0;
+    transition: opacity 1s .7s;
+    pointer-events: none;
+}
+
+#home .navi.active {
+    opacity: 1;
+    pointer-events: painted;
+    transition: opacity 0.5s;
+}
+
+#home .nav-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+#home .nav-item {
+    font-size: 10rem;
+    background: #becdd6;
+    text-shadow:  4px 4px 8px #859096,
+                -4px -4px 8px #f7ffff;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    padding: 2% 0;
+}
+
+
+#home .navi.active .nav-item {
+    opacity: 1;
+    transition: opacity 1s .7s;
+}
+
+#home .navi.active .nav-item a:hover {
+    text-shadow:  2px 2px 4px #859096,
+                -2px -2px 4px #f7ffff;
+}
+
+#home .nav-item a {
+    color: #becdd6;
+    display: inline-block;
+    line-height: 1;
+}
+
+#home .nav-item a p {
+    /* display: block; */
+    height: auto;
+}
+
+#home .copyright {
+    position: absolute;
+    height: 4%;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .copyright p {
+    display: block;
+    /* margin: auto; */
+}
+
+#home .openbtn-area  {
+    height: 46px;
+    display: flex;
+    position: fixed;
+    z-index: 9999;
+    top: 40px;
+    left: 50px;
+}
+
+#home .openbtn-circle {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: box-shadow 0.2s;
+    /* transition: after 0.8s; */
+    background: #becdd6;
+    box-shadow:  5px 5px 9px #859096,
+                -5px -5px 9px #f7ffff;
+}
+
+#home .openbtn-circle:active {
+    box-shadow: none;
+}
+
+#home .openbtn-circle::before {
+    content: 'PORTOFORIO';
+    position: absolute;
+    top: 50%;
+    left: 130%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    opacity: 1;
+    transition: 1s .7s;
+}
+
+#home  .openbtn-circle.active::before {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#home .openbtn-circle::after {
+    content: 'CLOSE';
+    position: absolute;
+    top: 50%;
+    left: 130%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#home  .openbtn-circle.active::after {
+    opacity: 1;
+    transition: 1s .7s;
+}
+
+#home .openbtn span {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 6px;
+    background: #becdd6;
+    box-shadow: inset 1px 1px 2px #859096,
+                inset -1px -1px 2px #f7ffff;
+    transition: all 1s;
+
+}
+
+#home .openbtn span:nth-of-type(1) {
+    top: 11px;
+}
+
+#home .openbtn span:nth-of-type(2) {
+    top: 20px;
+}
+
+#home .openbtn span:nth-of-type(3) {
+    top: 29px;
+}
+
+#home .openbtn-circle.active span:nth-of-type(1),
+#home .openbtn-circle.active span:nth-of-type(3) {
+    box-shadow: none;
+}
+
+#home .openbtn-circle.active span:nth-of-type(1),
+#home .openbtn-circle.active span:nth-of-type(3) {
+    opacity: 0;
+    transition: all .5s;
+}
+
+#home .openbtn-circle.active span:nth-of-type(2) {
+    width: 20px;
+}
+
+/* ----------------------------------------
+タブ
+---------------------------------------- */
+#works-area {
+    display: flex;
+    padding-top: 4%;
+    height: 85%;
+    width: 90%;
+}
+
+#works-area .tab-area {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    width: 25%;
+    overflow: auto;
+    -ms-overflow-style: none;
+    padding-top: 10px;
+}
+
+#works-area .tab-area::-webkit-scrollbar {
+    display: none;
+}
+
+#works-area .tab {
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #becdd6;
+    box-shadow:  5px 5px 10px #859096,
+                -5px -5px 10px #f7ffff;
+    cursor: pointer;
+    height: 80px;
+    margin: 15px 10px 10px 20px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#works-area .tab.active {
+    box-shadow: inset 5px 5px 10px #859096,
+                inset -5px -5px 10px #f7ffff;
+}
+
+/* #works-area span {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+} */
+
+
+#works-area .content-area {
+    padding: 15px;
+    border-radius: 20px;
+    background: #becdd6;
+    box-shadow: inset 5px 5px 10px #838d94,
+                inset -5px -5px 10px #f9ffff;
+    width: 75%;
+}
+
+#works-area .content {
+    display: block;
+    float: left;
+    min-height: 500px;
+    display: none;
+}
+
+#works-area .content.show {
+    display: block;
+}
