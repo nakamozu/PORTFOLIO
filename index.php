@@ -7,6 +7,7 @@
     <meta name="description" content="KAZUYA NAKAMOTO PORTFOLIO">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css/circle.css">
     <link rel="shortcut icon" href="img/favicon.ico">
 
     <title>KAZUYA NAKAMOTO</title>
@@ -75,9 +76,59 @@
                             広島のマンションリフォームの会社に約2年間勤め、<br>
                             転職のためにTECH I.S.でプログラミングを学習中。</p>
                     </div>
-                    <span class="read-btn">
-                        <a class="readmore" href="profile.html">READ MORE →</a>
-                    </span>
+                    <!-- スキルセット -->
+                    <div class="skill-set__flex">
+                        <ul class="skill-set__list">
+                            <li class="skill-set__item">
+                                <div class="skill-set__icon">
+                                    <img src="img/HTM_CSS.svg" alt="HTML/CSS">
+                                </div>
+                                <div class="skill-set__detail">
+                                        <p class="skill-set__name">HTML/CSS</p>
+                                        <p><span class="star5_rating" data-rate="3"></span></p>
+                                </div>
+                            </li>
+                            <li class="skill-set__item">
+                                <div class="skill-set__icon">
+                                    <img src="img/javascript.svg" alt="JavaScript">
+                                </div>
+                                <div class="skill-set__detail">
+                                        <p class="skill-set__name">JavaScript</p>
+                                        <p><span class="star5_rating" data-rate="3"></span></p>
+                                </div>
+                            </li>
+                            <li class="skill-set__item">
+                                <div class="skill-set__icon">
+                                    <img src="img/AdobeXD.svg" alt="XD">
+                                </div>
+                                <div class="skill-set__detail">
+                                        <p class="skill-set__name">Adobe XD</p>
+                                        <p><span class="star5_rating" data-rate="4"></span></p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="skill-set__list">
+                            <li class="skill-set__item">
+                                <div class="skill-set__icon">
+                                    <img src="img/php.svg" alt="PHP">
+                                </div>
+                                <div class="skill-set__detail">
+                                        <p class="skill-set__name">PHP（Laravel）</p>
+                                        <p><span class="star5_rating" data-rate="3"></span></p>
+                                </div>
+                            </li>
+                            <li class="skill-set__item">
+                                <div class="skill-set__icon">
+                                    <img src="img/mysql.svg" alt="MySQL">
+                                </div>
+                                <div class="skill-set__detail">
+                                        <p class="skill-set__name">MySQL</p>
+                                        <p><span class="star5_rating" data-rate="2"></span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -88,7 +139,7 @@
                     <h2>WORKS</h2>
                     <!-- スライダーに対応したテキスト -->
                     <div class="swiper-slide-text swiper-slide-text-1">
-                        <p class="slide-title">タイトル1</p>
+                        <p class="slide-title">PORTFOLIO</p>
                         <p class="slide-comment">あいうえおかきくけこさしすせそ</p>
                     </div>
                     <div class="swiper-slide-text swiper-slide-text-2">
@@ -157,9 +208,17 @@
                             <dt><label>お問い合わせ内容</label></dt>
                             <dd><textarea name="comment" required></textarea></dd>
                         </dl>
-                        <button type="submit">送信</button>
+                        <button class="submit" type="submit">送信</button>
                     </form>
-                    <p id="msg"></p>
+                    <div class="popup">
+                        <div class="popup-content">
+                            <div class="popup-item">
+                                <div id="loading"><img src="img/loading.gif"></div>
+                                <p id="msg"></p>
+                                <button class="close">閉じる</button>
+                            </div>
+                        </div>
+                    </div>
                     <div class="page-top">
                         <a href="#Home">
                             <div class="page-top-arrow"></div>
@@ -176,8 +235,8 @@
     <footer id="footer">
         <ul class="sns-list">
             <li class="sns-icon">
-                <a href="https://twitter.com/" target="_blank">
-                    <img src="img\2021 Twitter logo - black.png" alt="ツイッターアイコン">
+                <a href="https://twitter.com/mozu_life" target="_blank">
+                    <img src="img\2021 Twitter logo - black.png" alt="ツイッター">
                 </a>
             </li>
         </ul>

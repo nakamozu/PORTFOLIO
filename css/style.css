@@ -7,7 +7,7 @@ html {
 
 body {
     font-family: 'Noto Sans JP';
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     line-height: 1;
     color: #717679;
     background-color: #becdd6;
@@ -178,7 +178,7 @@ fixed
     top: 50%;
     left: 130%;
     transform: translateY(-50%);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     opacity: 1;
     transition: 1s .7s;
 }
@@ -194,7 +194,7 @@ fixed
     top: 50%;
     left: 130%;
     transform: translateY(-50%);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     opacity: 0;
     transition: 0.5s;
 }
@@ -348,7 +348,6 @@ home
 
 #home .btn-scroll-text {
     display: block;
-    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -358,7 +357,7 @@ home
     height: 40px;
     width: 1px;
     left: 50%;
-    border-left: solid 1px #9BC6BD;
+    border-left: solid 1px #717679;
 }
 
 /* ----------------------------------------
@@ -401,9 +400,7 @@ about
 }
 
 #about .right .about-text h2 {
-    position: absolute;
-    left: 0;
-    top: 20%;
+    margin-top: 15%;
     font-size: 3.5rem;
     color: #f00;
     text-shadow:  2px 2px 3px #859096,
@@ -411,56 +408,93 @@ about
 }
 
 #about .right .about-text p:nth-child(2) {
-    position: absolute;
-    left: 0;
-    top: 30%;
+    margin-top: 10%;
     font-size: 5rem;
     font-weight: 400;
 }
 
 #about .right .about-text p:nth-child(3) {
-    position: absolute;
-    left: 0;
-    top: 38%;
+    margin-top: 2%;
     font-size: 2rem;
 }
 
 #about .right .about-text p:nth-child(4) {
-    position: absolute;
-    left: 0;
-    top: 45%;
+    margin-top: 10%;
     display: inline-block;
     font-size: 1.6rem;
     line-height: 2.8rem;
 }
 
-#about .right .read-btn {
-    position: absolute;
-    left: 0;
-    top: 65%;
-    width: 150px;
-    height: 50px;
-    display: block;
-    border-radius: 30px;
-    background: #becdd6;
-    box-shadow:  5px 5px 10px #859096,
-                -5px -5px 10px #f7ffff;
-    text-align: center;
-    transition: all 0.2s;
-}
-
-#about .read-btn:active {
-    box-shadow: none;
-}
-
-#about .right .read-btn .readmore {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.4rem;
-    height: 100%;
+.skill-set__flex {
+    margin-top: 10%;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
+
+.skill-set__list {
+    width: 47%;
+    display: block;
+}
+
+.skill-set__item {
+    display: flex;
+    margin-bottom: 2rem;
+    height: 4.2rem;
+}
+
+.skill-set__icon {
+    width: 15%;
+    height: auto;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.skill-set__icon img {
+    vertical-align: middle;
+}
+
+.skill-set__detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.star5_rating{
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    white-space: nowrap;
+    color: #fff; /* グレーカラー 自由に設定化 */
+    font-size: 2.5rem; /* フォントサイズ 自由に設定化 */
+    /* border: 1px #000; */
+}
+
+.star5_rating:before, .star5_rating:after{
+    content: '★★★★★';
+}
+
+.star5_rating:after{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #ffcf32; /* イエローカラー 自由に設定化 */
+}
+
+.star5_rating[data-rate="5"]:after{ width: 100%; } /* 星5 */
+.star5_rating[data-rate="4.5"]:after{ width: 90%; } /* 星4.5 */
+.star5_rating[data-rate="4"]:after{ width: 80%; } /* 星4 */
+.star5_rating[data-rate="3.5"]:after{ width: 70%; } /* 星3.5 */
+.star5_rating[data-rate="3"]:after{ width: 60%; } /* 星3 */
+.star5_rating[data-rate="2.5"]:after{ width: 50%; } /* 星2.5 */
+.star5_rating[data-rate="2"]:after{ width: 40%; } /* 星2 */
+.star5_rating[data-rate="1.5"]:after{ width: 30%; } /* 星1.5 */
+.star5_rating[data-rate="1"]:after{ width: 20%; } /* 星1 */
+.star5_rating[data-rate="0.5"]:after{ width: 10%; } /* 星0.5 */
+.star5_rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
 
 /* ----------------------------------------
 works
@@ -491,16 +525,12 @@ works
 }
 
 #works .left .swiper-slide-text .slide-title {
-    position: absolute;
-    top: 30%;
-    left: 0%;
-    font-size: 2.5rem;
+    margin-top: 15%;
+    font-size: 4rem;
 }
 
 #works .left .swiper-slide-text .slide-comment {
-    position: absolute;
-    top: 50%;
-    left: 0%;
+    margin-top: 20%;
 }
 
 #works .right {
@@ -560,10 +590,6 @@ contact
     margin-bottom: 7%;
 }
 
-#contact .contact-inner .text-area p {
-    font-size: 1.3rem;
-}
-
 #contact .contact-inner .form-area {
     display: flex;
     flex-direction: column;
@@ -580,7 +606,7 @@ contact
     width: 20%;
     padding-right: 2%;
     text-align: right;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin: auto;
 }
 
@@ -631,6 +657,84 @@ contact
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.popup {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 20000;
+    top: 0;
+    left: 0;
+}
+
+.popup .active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content{
+    background: rgb(190,205,214);
+    padding: 30px;
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.popup-item {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#loading {
+    position: absolute;
+    inset: 0;
+    top: 25%;
+    margin: auto;
+}
+
+#loading img{
+    height: 30px;
+    width: auto;
+}
+
+#msg {
+    position: absolute;
+    inset: 0;
+    top: 25%;
+    width: 100%;
+    font-size: 1.6rem;
+    height: 20px;
+    margin: 0 auto;
+}
+
+.close {
+    height: 40px;
+    width: 100px;
+    background: #becdd6;
+    box-shadow:  5px 5px 9px #859096,
+                -5px -5px 9px #f7ffff;
+    border-radius: 5px;
+    transition: box-shadow 0.2s;
+    position: absolute;
+    inset: 0;
+    top: 65%;
+    margin: 0 auto;
+}
+
+.close:active {
+    box-shadow: none;
 }
 
 /* ----------------------------------------
