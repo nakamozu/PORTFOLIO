@@ -89,21 +89,24 @@ $(function(){
 
         carouselModule.configure()
 
-        // お問い合わせフォーム
-        // 送信ボタンをクリックされたら
-        $('#sendmail').submit(function(event){
-        // e.preventDefault(); // 画面が更新されないように
-
+    // お問い合わせフォーム
+    // 送信ボタンをクリックされたら
+    $('#sendmail').submit(function(event){
+        event.preventDefault ();
         // 操作対象のフォーム要素を取得
         var $form = $(this);
 
         // 送信ボタンを取得
         var $button = $form.find('button');
 
+        // $(document).ajaxSend(function() {
+        //     $("#overlay").fadeIn(300);
+        // });
+        
         // Ajax処理
         $.ajax ({
-            type: $form.attr('method'),
-            url: $form.attr('action'),
+            type: 'post',
+            url: 'mail.php',
             data: $form.serialize(),
             dataTime: false,
             timeout: 10000,
@@ -127,10 +130,21 @@ $(function(){
             // ajax通信失敗時の処理
             $('#msg').html("通信エラーが発生しました。");
             }
-        });
+        }).done(function() {
+			$('#loading').fadeOut(300);
+		}),
+
+        // ポップアップ表示
+        $('.popup').addClass('active').fadeIn();        
         return false;
-        });
+    });
+
+    // ポップアップ削除
+    $('.close').on('click',function(){
+        $('.popup').removeClass('active').fadeOut();
+    });
 });
+
 
 // worksページ
 $(function() {

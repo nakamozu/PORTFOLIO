@@ -78,7 +78,7 @@ try {
     }
     } catch (Exception $e) {
     //エラー（例外：Exception）が発生した場合
-    echo "メッセージを送信できませんでした。: {$mail->ErrorInfo}";
+    echo "メッセージを送信できませんでした。";
 }
 
 
