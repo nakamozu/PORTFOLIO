@@ -74,14 +74,11 @@ $(function(){
                 },
                 on: {
                 slideChange: function(){
-                    jQuery('.swiper-slide-text').css('opacity', '0');
+                    jQuery('.swiper-slide-text').css('display', 'none');
                     realIndex = this.realIndex + 1;
-                    jQuery('.swiper-slide-text-'+ realIndex).css('opacity', '1');
+                    jQuery('.swiper-slide-text-'+ realIndex).css('display', 'block');
                 }
                 }
-                // autoplay: {
-                //   delay: 5000,
-                // },
             });
             }
         }

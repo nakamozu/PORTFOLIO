@@ -128,7 +128,6 @@
                             </li>
                         </ul>
                     </div>
-                    
                 </div>
             </div>
         </section>
@@ -138,17 +137,31 @@
                 <div class="left">
                     <h2>WORKS</h2>
                     <!-- スライダーに対応したテキスト -->
-                    <div class="swiper-slide-text swiper-slide-text-1">
-                        <p class="slide-title">PORTFOLIO</p>
-                        <p class="slide-comment">あいうえおかきくけこさしすせそ</p>
-                    </div>
-                    <div class="swiper-slide-text swiper-slide-text-2">
-                        <p class="slide-title">タイトル2</p>
-                        <p class="slide-comment">たちつてとなにぬねのはひふへほ</p>
-                    </div>
-                    <div class="swiper-slide-text swiper-slide-text-3">
-                        <p class="slide-title">タイトル3</p>
-                        <p class="slide-comment">まみむめもやゆよらりるれろわをん</p>
+                    <div class="swiper-slide-content">
+                        <div class="swiper-slide-text swiper-slide-text-1">
+                            <p class="slide-title">PORTFOLIO</p>
+                            <p class="slide-comment">
+                                中本和哉のポートフォリオサイトです。<br>
+                                「ニューモーフィズム」という立体感のあるデザイン手法を使用したデザインにしています。
+                            </p>
+                            <span class="read-btn read-btn-1">
+                                <a class="readmore readmore-1" href="works.html#tab1">READ MORE →</a>
+                            </span>
+                        </div>
+                        <div class="swiper-slide-text swiper-slide-text-2">
+                            <p class="slide-title">タイトル2</p>
+                            <p class="slide-comment">たちつてとなにぬねのはひふへほ</p>
+                            <span class="read-btn read-btn-2">
+                                <a class="readmore readmore-2" href="works.html#tab2">READ MORE →</a>
+                            </span>
+                        </div>
+                        <div class="swiper-slide-text swiper-slide-text-3">
+                            <p class="slide-title">タイトル3</p>
+                            <p class="slide-comment">まみむめもやゆよらりるれろわをん</p>
+                            <span class="read-btn read-btn-3">
+                                <a class="readmore readmore-3" href="works.html#tab3">READ MORE →</a>
+                            </span>
+                        </div>
                     </div>
                 </div>
 

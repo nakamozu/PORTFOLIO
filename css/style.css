@@ -501,15 +501,12 @@ works
 ---------------------------------------- */
 #works {
     position: relative;
+    display: flex;
 }
 
 #works .left {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
-    width: calc(100% - 80%);
-    height: calc(100% - 40%);
+    width: 22%;
+    margin: 10% 3% 10% 10%;
 }
 
 #works .left h2 {
@@ -519,42 +516,72 @@ works
                 -2px -2px 3px #f7ffff;
 }
 
+.swiper-slide-content {
+    position: relative;
+    margin-top: 15%;
+    height: 100%;
+}
+
 #works .left .swiper-slide-text {
-    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: none;
     transition: all 2s ease 0s;
 }
 
 #works .left .swiper-slide-text .slide-title {
-    margin-top: 15%;
     font-size: 4rem;
 }
 
 #works .left .swiper-slide-text .slide-comment {
     margin-top: 20%;
+    height: 110px;
 }
 
-#works .right {
+.read-btn {
     position: absolute;
-    top: 50%;
-    right: 10%;
-    transform: translateY(-50%);
-    width: calc(100% - 45%);
-    height: calc(100% - 40%);
+    top: 60%;
+    left: 0;
+    width: 150px;
+    height: 50px;
     border-radius: 30px;
     background: #becdd6;
-    box-shadow: inset 20px 20px 40px #859096,
-                inset -20px -20px 40px #f7ffff;
+    box-shadow:  5px 5px 10px #859096,
+                -5px -5px 10px #f7ffff;
+    transition: box-shadow 0.2s;
+}
+
+.read-btn:active {
+    box-shadow: none;
+}
+
+.read-btn .readmore {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.4rem;
+    height: 100%;
+    width: 100%;
+}
+
+#works .right {
+    position: relative;
+    width: 55%;
+    height: calc(100% - 40%);
+    border-radius: 30px;
+    background: #becdd6;
+    box-shadow: inset 20px 20px 40px #859096, inset -20px -20px 40px #f7ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 10% auto 0;
 }
 
 #works .swiper {
     width: calc(100% - 20%);
     height: calc(100% - 20%);
-}
-
-#works .swiper-slide {
 }
 
 #works .swiper-slide a {
