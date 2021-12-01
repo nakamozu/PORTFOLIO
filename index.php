@@ -175,7 +175,7 @@
                         <div class="swiper-wrapper">
                             <!-- スライドさせるアイテム -->
                             <div class="swiper-slide swiper-slide-1">
-                                <a href="works.html#tab1"></a>
+                                <a href="works.html#tab1"><img src="img/PORTFOLIO home.png" alt="PORTFOLIO"></a>
                             </div>
                             <div class="swiper-slide swiper-slide-2">
                                 <a href="works.html#tab2"></a>

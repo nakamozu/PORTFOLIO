@@ -573,7 +573,11 @@ works
 }
 
 .swiper-slide-1 {
-    background: #fff;
+}
+
+.swiper-slide-1 img {
+    width: 98%;
+    border: solid 2px #fff;
 }
 
 .swiper-slide-2 {
