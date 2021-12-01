@@ -142,26 +142,30 @@
                             <p class="slide-title">PORTFOLIO</p>
                             <p class="slide-comment">
                                 中本和哉のポートフォリオサイトです。<br>
-                                「ニューモーフィズム」という立体感のあるデザイン手法を使用したデザインにしています。
+                                「ニューモーフィズム」という立体感のあるデザイン手法を使用しています。
                             </p>
-                            <span class="read-btn read-btn-1">
-                                <a class="readmore readmore-1" href="works.html#tab1">READ MORE →</a>
+                            <span class="read-btn">
+                                <a class="readmore" href="works.html#tab1">READ MORE →</a>
                             </span>
                         </div>
                         <div class="swiper-slide-text swiper-slide-text-2">
-                            <p class="slide-title">タイトル2</p>
-                            <p class="slide-comment">たちつてとなにぬねのはひふへほ</p>
-                            <span class="read-btn read-btn-2">
-                                <a class="readmore readmore-2" href="works.html#tab2">READ MORE →</a>
+                            <p class="slide-title">Bonds Hair</p>
+                            <p class="slide-comment">
+                                現在進行中
+                            </p>
+                            <span class="read-btn">
+                                <a class="readmore" href="works.html#tab2">READ MORE →</a>
                             </span>
                         </div>
-                        <div class="swiper-slide-text swiper-slide-text-3">
-                            <p class="slide-title">タイトル3</p>
-                            <p class="slide-comment">まみむめもやゆよらりるれろわをん</p>
-                            <span class="read-btn read-btn-3">
-                                <a class="readmore readmore-3" href="works.html#tab3">READ MORE →</a>
+                        <!-- <div class="swiper-slide-text swiper-slide-text-3">
+                            <p class="slide-title">タイトル</p>
+                            <p class="slide-comment">
+                                コメントコメントコメント
+                            </p>
+                            <span class="read-btn">
+                                <a class="readmore" href="works.html#tab3">READ MORE →</a>
                             </span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -170,30 +174,18 @@
                     <div class="swiper">                
                         <div class="swiper-wrapper">
                             <!-- スライドさせるアイテム -->
-                            <div class="swiper-slide" style="background-color: aqua;">
+                            <div class="swiper-slide swiper-slide-1">
                                 <a href="works.html#tab1"></a>
                             </div>
-                            <div class="swiper-slide" style="background-color: bisque;">
+                            <div class="swiper-slide swiper-slide-2">
                                 <a href="works.html#tab2"></a>
                             </div>
-                            <div class="swiper-slide" style="background-color: brown;">
-                                <a href="works.html#tab3"></a>
-                            </div>
                             <!-- <div class="swiper-slide">
-                                <a href=""></a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href=""></a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href=""></a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href=""></a>
+                                <a href="works.html#tab3"></a>
                             </div> -->
                         </div>
                     </div>
-                    <!-- If we need navigation buttons -->
+                    <!-- スライダーボタン -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
 

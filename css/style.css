@@ -168,7 +168,7 @@ fixed
 }
 
 #home .openbtn-circle::before {
-    content: 'PORTOFORIO';
+    content: 'PORTFORIO';
     position: absolute;
     top: 50%;
     left: 130%;
@@ -277,13 +277,14 @@ fixed
 /* 現在地のテキスト設定 */
 .pagination a .hover-text {
     position: absolute;
-    left: 15px;
+    left: 10px;
     top: 15px;
     transform: translateY(-50%);
     opacity: 0;
     -webkit-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease;
     padding-left: 15px;
+    font-size: 1.4rem;
 }
 
 .pagination a:hover .hover-text {
@@ -293,8 +294,6 @@ fixed
 
 /* 丸の部分 */
 .pagination a:after { 
-    /* -webkit-transition: box-shadow 0.5s ease;
-    transition: box-shadow 0.5s ease; */
     position: absolute;
     top: 10px;
     left: 10px;
@@ -457,7 +456,6 @@ about
     white-space: nowrap;
     color: #fff; /* グレーカラー 自由に設定化 */
     font-size: 2.5rem; /* フォントサイズ 自由に設定化 */
-    /* border: 1px #000; */
 }
 
 .star5_rating:before, .star5_rating:after{
@@ -572,6 +570,14 @@ works
 #works .swiper {
     width: calc(100% - 20%);
     height: calc(100% - 20%);
+}
+
+.swiper-slide-1 {
+    background: #fff;
+}
+
+.swiper-slide-2 {
+    background-color: #fff;
 }
 
 #works .swiper-slide a {

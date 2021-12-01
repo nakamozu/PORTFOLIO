@@ -7,7 +7,7 @@ html {
 
 body {
     font-family: 'Noto Sans JP';
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     line-height: 1;
     color: #717679;
     background-color: #becdd6;
@@ -29,21 +29,6 @@ img {
 
 li {
     list-style: none;
-}
-
-.sns-icon {
-    width: 30px;
-    height: 30px;
-}
-
-.read-btn {
-    width: 150px;
-    height: 50px;
-
-}
-
-.readme {
-    text-align: center;
 }
 
 #main {
@@ -177,7 +162,7 @@ fixed
 }
 
 #home .openbtn-circle::before {
-    content: 'PORTOFORIO';
+    content: 'WORKS';
     position: absolute;
     top: 50%;
     left: 130%;
@@ -295,7 +280,7 @@ fixed
 }
 
 #works-area .content-area {
-    padding: 15px;
+    padding: 20px;
     border-radius: 20px;
     background: #becdd6;
     box-shadow: inset 5px 5px 10px #838d94,
@@ -304,12 +289,106 @@ fixed
 }
 
 #works-area .content {
-    display: block;
     float: left;
     min-height: 500px;
     display: none;
+    width: 100%;
 }
 
 #works-area .content.show {
     display: block;
+}
+
+#works-area .content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 3%;
+}
+
+#works-area .content p {
+    margin-bottom: 2%;
+}
+
+@media screen and (max-width: 1024px){
+    #main {
+        padding: 90px 40px;
+    }
+
+    /* home */
+    #home .fixed .site-title {
+        top: 40px;
+        right: 50px;
+        font-size: 2.5rem;
+    }
+
+    #home .nav-item {
+        padding: 3% 0;
+    }
+
+    #home .nav-item:first-child {
+        padding-top: 20%;
+    }
+
+    #home .openbtn-area  {
+        top: 40px;
+        left: 40px;
+    }
+
+    #works-area {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 0;
+    }
+
+    #works-area .tab-area {
+        display: flex;
+        width: 100%;
+        overflow: visible;
+    }
+
+    #works-area .tab {
+        font-size: 1.6rem;
+        width: 23%;
+        margin: 1% 1.5%;
+    }
+
+    #works-area .content-area {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 599px){
+    .main {
+        padding: 60px 10px;
+    }
+
+    /* home */
+    #home .fixed .site-title {
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+    }
+
+    #home .nav-item {
+        font-size: 6rem;
+        padding: 5% 0;
+    }
+
+    #home .nav-item:first-child {
+        padding-top: 25%;
+    }
+
+    #home .openbtn-area  {
+        top: 20px;
+        left: 20px;
+    }
+
+    #works-area {
+        height: 100%;
+    }
+
+    #works-area .tab {
+        font-size: 1.2rem;
+    }
+
 }
