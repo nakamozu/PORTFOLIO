@@ -96,7 +96,7 @@ fixed
 }
 
 #home .nav-item:first-child {
-    padding-top: 7%;
+    padding-top: 6%;
 }
 
 #home .navi.active .nav-item {
@@ -490,6 +490,7 @@ works
 #works {
     position: relative;
     display: flex;
+    justify-content: center;
 }
 
 #works .left {
@@ -788,11 +789,12 @@ footer
     }
 
     #home .nav-item {
+        font-size: 8rem;
         padding: 3% 0;
     }
 
     #home .nav-item:first-child {
-        padding-top: 20%;
+        padding-top: 12%;
     }
 
     #home .openbtn-area  {
@@ -855,10 +857,11 @@ footer
     /* works */
     #works {
         flex-direction: column;
+        align-items: center;
     }
 
     #works .left {
-        margin: 8% 0 0;
+        margin: 3% 0 0;
         width: 100%;
     }
 
@@ -871,7 +874,7 @@ footer
     }
 
     .swiper-slide-content {
-        margin-top: 10%;
+        margin-top: 6%;
     }
 
     #works .left .swiper-slide-text .slide-comment {
