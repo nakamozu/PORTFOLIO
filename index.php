@@ -63,7 +63,7 @@
             
                 <div class="left">
                     <div class="img-box">
-                        <img src="宣材写真\プロフィール写真1.JPG" alt="プロフィール写真">
+                        <img src="img\プロフィール写真.JPG" alt="プロフィール写真">
                     </div>
                 </div>
                 <div class="right">
