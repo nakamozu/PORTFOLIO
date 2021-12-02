@@ -515,6 +515,7 @@ works
     top: 0;
     left: 0;
     height: 100%;
+    width: 100%;
     display: none;
     transition: all 2s ease 0s;
 }
@@ -572,15 +573,12 @@ works
     height: calc(100% - 20%);
 }
 
-.swiper-slide-1 {
-}
-
-.swiper-slide-1 img {
+.swiper-slide img {
     width: 98%;
     border: solid 2px #fff;
 }
 
-.swiper-slide-2 {
+.swiper-slide-3 {
     background-color: #fff;
 }
 

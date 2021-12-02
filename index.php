@@ -149,23 +149,23 @@
                             </span>
                         </div>
                         <div class="swiper-slide-text swiper-slide-text-2">
-                            <p class="slide-title">Bonds Hair</p>
+                            <p class="slide-title">Daily management</p>
                             <p class="slide-comment">
-                                現在進行中
+                                チーム開発で制作した日用品管理システムです。
                             </p>
                             <span class="read-btn">
                                 <a class="readmore" href="works.html#tab2">READ MORE →</a>
                             </span>
                         </div>
-                        <!-- <div class="swiper-slide-text swiper-slide-text-3">
-                            <p class="slide-title">タイトル</p>
+                        <div class="swiper-slide-text swiper-slide-text-3">
+                            <p class="slide-title">Bonds Hair</p>
                             <p class="slide-comment">
-                                コメントコメントコメント
+                                現在進行中
                             </p>
                             <span class="read-btn">
                                 <a class="readmore" href="works.html#tab3">READ MORE →</a>
                             </span>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
 
@@ -178,11 +178,11 @@
                                 <a href="works.html#tab1"><img src="img/PORTFOLIO home.png" alt="PORTFOLIO"></a>
                             </div>
                             <div class="swiper-slide swiper-slide-2">
-                                <a href="works.html#tab2"></a>
+                                <a href="works.html#tab2"><img src="img/Daily management home.png" alt="Daily management"></a>
                             </div>
-                            <!-- <div class="swiper-slide">
+                            <div class="swiper-slide swiper-slide-3">
                                 <a href="works.html#tab3"></a>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                     <!-- スライダーボタン -->
