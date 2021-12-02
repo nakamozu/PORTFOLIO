@@ -1,9 +1,12 @@
 @charset "UTF-8";
 
+* {
+    -webkit-appearance: none;
+}
+
 html {
     /* 1remが10px */
     font-size: 10px;
-    -webkit-appearance: none;
 }
 
 body {
