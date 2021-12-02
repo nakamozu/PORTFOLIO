@@ -3,6 +3,7 @@
 html {
     /* 1remが10px */
     font-size: 10px;
+    -webkit-appearance: none;
 }
 
 body {
@@ -157,7 +158,6 @@ fixed
     cursor: pointer;
     border-radius: 50%;
     transition: box-shadow 0.2s;
-    /* transition: after 0.8s; */
     background: #becdd6;
     box-shadow:  5px 5px 9px #859096,
                 -5px -5px 9px #f7ffff;
@@ -653,7 +653,6 @@ contact
 
 #contact .contact-inner .form-area input:-webkit-autofill{
     box-shadow: inset 5px 5px 10px #838d94;
-                
 }
 
 #contact .contact-inner .form-area textarea {
@@ -943,7 +942,6 @@ footer
     /* about */
     #about {
         flex-direction: column;
-        /* position: relative; */
     }
 
     #about .left {
