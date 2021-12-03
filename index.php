@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css\style.css">
     <link rel="stylesheet" href="css/circle.css">
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/N icon.png">
 
     <title>KAZUYA NAKAMOTO</title>
 </head>
