@@ -160,7 +160,7 @@
                         <div class="swiper-slide-text swiper-slide-text-3">
                             <p class="slide-title">Bonds Hair</p>
                             <p class="slide-comment">
-                                現在進行中
+                                Bonds Hair様のホームページを制作しています。
                             </p>
                             <span class="read-btn">
                                 <a class="readmore" href="works.html#tab3">READ MORE →</a>
@@ -181,7 +181,7 @@
                                 <a href="works.html#tab2"><img src="img/Daily management home.png" alt="Daily management"></a>
                             </div>
                             <div class="swiper-slide swiper-slide-3">
-                                <a href="works.html#tab3"></a>
+                                <a href="works.html#tab3"><img src="img/BondsHair home.png" alt="Bonds Hair"></a>
                             </div>
                         </div>
                     </div>
